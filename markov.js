@@ -41,11 +41,11 @@ class MarkovMachine {
     let output = [];
 
     while (output.length < numWords && key !== null) {
-      out.push(key);
-      key = MarkovMachine.choice(this.chains.get(key));
+      output.push(key);
+      key = MarkovMachine.choice(this.mChains.get(key));
     }
 
-    return out.join(" ");
+    return output.join(" ");
   }
 }
 
